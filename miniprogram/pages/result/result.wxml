@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="result-header fade-in">
+    <view class="celebration">🎊</view>
+    <view class="result-title">恭喜通过第 {{level}} 关</view>
+    <view class="result-subtitle">以下是本关所有成语</view>
+  </view>
+
+  <view class="idioms-list">
+    <view class="idiom-item card fade-in" 
+          wx:for="{{idioms}}" 
+          wx:key="id"
+          data-index="{{index}}"
+          bindtap="viewIdiomDetail">
+      <view class="idiom-text">{{item.idiom}}</view>
+      <view class="idiom-hint">{{item.hint}}</view>
+      <view class="view-detail">
+        <text>查看详情</text>
+        <text class="arrow">›</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="action-buttons">
+    <button class="btn-secondary" bindtap="backToHome">返回首页</button>
+    <button class="btn-primary" bindtap="nextLevel">下一关</button>
+  </view>
+</view>

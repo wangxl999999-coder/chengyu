@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="empty-tips" wx:if="{{notebooks.length === 0 && !loading}}">
+    <view class="empty-icon">📖</view>
+    <view class="empty-text">生词本是空的</view>
+    <view class="empty-desc">在游戏中查看成语详情时可以添加到生词本</view>
+  </view>
+
+  <view class="notebook-list" wx:else>
+    <view class="notebook-item card fade-in" 
+          wx:for="{{notebooks}}" 
+          wx:key="id">
+      <view class="notebook-content" data-index="{{index}}" bindtap="viewIdiomDetail">
+        <view class="idiom-text">{{item.idiom}}</view>
+        <view class="idiom-pinyin" wx:if="{{item.pinyin}}">{{item.pinyin}}</view>
+        <view class="idiom-explanation" wx:if="{{item.explanation}}">{{item.explanation}}</view>
+      </view>
+      <view class="remove-btn" data-index="{{index}}" catchtap="removeNotebook">
+        <text>移除</text>
+      </view>
+    </view>
+  </view>
+</view>

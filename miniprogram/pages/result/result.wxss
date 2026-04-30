@@ -1,0 +1,71 @@
+.result-header {
+  text-align: center;
+  padding: 60rpx 0;
+}
+
+.celebration {
+  font-size: 100rpx;
+  margin-bottom: 30rpx;
+}
+
+.result-title {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.result-subtitle {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.idioms-list {
+  margin-top: 20rpx;
+}
+
+.idiom-item {
+  margin-bottom: 20rpx;
+}
+
+.idiom-text {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15rpx;
+}
+
+.idiom-hint {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 44rpx;
+  margin-bottom: 20rpx;
+}
+
+.view-detail {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 26rpx;
+  color: #ff6b6b;
+}
+
+.arrow {
+  margin-left: 10rpx;
+  font-size: 32rpx;
+}
+
+.action-buttons {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx 40rpx;
+}
+
+.action-buttons button {
+  width: 45%;
+  margin: 0;
+  padding: 0;
+  line-height: 88rpx;
+  height: 88rpx;
+}

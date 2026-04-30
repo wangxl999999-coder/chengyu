@@ -1,0 +1,62 @@
+<view class="container">
+  <view class="report-btn" bindtap="showReport">
+    <text class="report-icon">⚠</text>
+    <text>报错</text>
+  </view>
+
+  <view class="idiom-header card fade-in">
+    <view class="idiom-text">{{idiom.idiom}}</view>
+    <view class="idiom-pinyin" wx:if="{{idiom.pinyin}}">{{idiom.pinyin}}</view>
+  </view>
+
+  <view class="idiom-content">
+    <view class="section card fade-in">
+      <view class="section-title">释义</view>
+      <view class="section-content">{{idiom.explanation || '暂无'}}</view>
+    </view>
+
+    <view class="section card fade-in" wx:if="{{idiom.source}}">
+      <view class="section-title">出处</view>
+      <view class="section-content">{{idiom.source}}</view>
+    </view>
+
+    <view class="section card fade-in" wx:if="{{idiom.example}}">
+      <view class="section-title">示例</view>
+      <view class="section-content">{{idiom.example}}</view>
+    </view>
+  </view>
+
+  <view class="action-buttons">
+    <button class="btn-secondary" open-type="share">
+      <text class="btn-icon">📤</text>
+      <text>分享</text>
+    </button>
+    <button class="btn-primary" bindtap="toggleNotebook">
+      <text class="btn-icon">{{isInNotebook ? '📚' : '⭐'}}</text>
+      <text>{{isInNotebook ? '已加入生词本' : '加入生词本'}}</text>
+    </button>
+  </view>
+
+  <view class="report-modal" wx:if="{{showReportModal}}">
+    <view class="report-mask" bindtap="hideReport"></view>
+    <view class="report-content fade-in">
+      <view class="report-header">
+        <view class="report-title">报错反馈</view>
+        <view class="report-close" bindtap="hideReport">×</view>
+      </view>
+      <view class="report-body">
+        <view class="report-info">
+          <text>成语：{{idiom.idiom}}</text>
+        </view>
+        <textarea class="report-input" 
+                  placeholder="请描述您发现的错误（如：成语解释错误、拼音错误等）"
+                  name="content"
+                  value="{{reportContent}}"></textarea>
+      </view>
+      <view class="report-footer">
+        <button class="btn-cancel" bindtap="hideReport">取消</button>
+        <button class="btn-submit" form-type="submit">提交</button>
+      </view>
+    </view>
+  </view>
+</view>
