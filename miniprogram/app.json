@@ -4,8 +4,7 @@
     "pages/game/game",
     "pages/result/result",
     "pages/idiom-detail/idiom-detail",
-    "pages/notebook/notebook",
-    "pages/report/report"
+    "pages/notebook/notebook"
   ],
   "window": {
     "backgroundTextStyle": "light",

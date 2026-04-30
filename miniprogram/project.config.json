@@ -23,7 +23,7 @@
         "swc": false,
         "disableSWC": true
     },
-    "compileType": "game",
+    "compileType": "miniprogram",
     "simulatorPluginLibVersion": {},
     "packOptions": {
         "ignore": [],
