@@ -1,0 +1,72 @@
+.user-info {
+  margin-top: 20rpx;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatar image {
+  width: 100%;
+  height: 100%;
+}
+
+.nickname {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.level-info {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.ml-30 {
+  margin-left: 30rpx;
+}
+
+.stats-row {
+  margin-top: 30rpx;
+}
+
+.stat-card {
+  width: 48%;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #ff6b6b;
+}
+
+.stat-label {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 10rpx;
+}
+
+.game-start {
+  margin-top: 80rpx;
+  text-align: center;
+}
+
+.tips-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.tips-content {
+  display: flex;
+  flex-direction: column;
+  line-height: 48rpx;
+  color: #666;
+  font-size: 26rpx;
+}

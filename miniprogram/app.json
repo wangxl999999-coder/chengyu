@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game",
+    "pages/result/result",
+    "pages/idiom-detail/idiom-detail",
+    "pages/notebook/notebook",
+    "pages/report/report"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff6b6b",
+    "navigationBarTitleText": "成语闯关",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f5f5"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

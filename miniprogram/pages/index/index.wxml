@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="user-info card fade-in">
+    <view class="flex items-center">
+      <view class="avatar">
+        <image src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="ml-30">
+        <view class="nickname">{{userInfo.nickName || '游客'}}</view>
+        <view class="level-info">
+          <text>当前关卡：{{currentLevel}} / {{totalLevels}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="stats-row flex space-between">
+    <view class="stat-card card" bindtap="goToNotebook">
+      <view class="stat-value">{{notebookCount}}</view>
+      <view class="stat-label">生词本</view>
+    </view>
+    <view class="stat-card card">
+      <view class="stat-value">{{completedLevels}}</view>
+      <view class="stat-label">已通关</view>
+    </view>
+  </view>
+
+  <view class="game-start">
+    <button class="btn-primary pulse" bindtap="startGame">
+      开始闯关
+    </button>
+  </view>
+
+  <view class="tips card mt-20">
+    <view class="tips-title">游戏说明</view>
+    <view class="tips-content">
+      <text>1. 每关有1-3个成语需要填写</text>
+      <text>2. 从备选字中选择正确的字填入成语</text>
+      <text>3. 完成后可以查看成语详情并加入生词本</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="level-header">
+    <view class="level-info">
+      <text class="level-num">第 {{level}} 关</text>
+      <text class="level-progress">{{currentIdiomIndex + 1}} / {{idioms.length}}</text>
+    </view>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{(currentIdiomIndex + 1) / idioms.length * 100}}%"></view>
+    </view>
+  </view>
+
+  <view class="idiom-container card fade-in" wx:if="{{!isComplete}}">
+    <view class="idiom-display">
+      <view class="idiom-box flex justify-center items-center">
+        <block wx:for="{{characters}}" wx:key="index">
+          <view class="character-box {{emptyPositions.indexOf(index) !== -1 ? 'empty' : ''}} {{filledPositions[index] ? (filledPositions[index].correct ? 'correct' : 'wrong') : ''}}" wx:if="{{emptyPositions.indexOf(index) === -1}}">
+            <text>{{item}}</text>
+          </view>
+          <view class="character-box empty {{filledPositions[index] ? (filledPositions[index].correct ? 'correct' : 'wrong') : ''}}" wx:else>
+            <text wx:if="{{filledPositions[index]}}">{{filledPositions[index].word}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="idiom-hint" wx:if="{{currentIdiom.hint}}">
+      <text class="hint-label">提示：</text>
+      <text class="hint-text">{{currentIdiom.hint}}</text>
+    </view>
+  </view>
+
+  <view class="options-container card mt-20" wx:if="{{!isComplete}}">
+    <view class="options-title">请选择正确的字</view>
+    <view class="options-grid">
+      <view class="option-item {{selectedWords.indexOf(index) !== -1 ? 'selected' : ''}}" 
+            wx:for="{{options}}" 
+            wx:key="index"
+            data-word="{{item}}"
+            data-index="{{index}}"
+            bindtap="selectWord">
+        <text>{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="result-modal" wx:if="{{showResult}}">
+    <view class="result-content bounce">
+      <view class="result-icon">🎉</view>
+      <view class="result-title">恭喜通关！</view>
+      <view class="result-desc">第 {{level}} 关已完成</view>
+      <button class="btn-primary" bindtap="goToResult">查看成语详情</button>
+    </view>
+  </view>
+</view>

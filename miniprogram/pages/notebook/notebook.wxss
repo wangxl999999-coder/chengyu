@@ -1,0 +1,65 @@
+.empty-tips {
+  text-align: center;
+  padding: 160rpx 40rpx;
+}
+
+.empty-icon {
+  font-size: 120rpx;
+  margin-bottom: 40rpx;
+}
+
+.empty-text {
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 20rpx;
+}
+
+.empty-desc {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.notebook-list {
+  padding-top: 20rpx;
+}
+
+.notebook-item {
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.notebook-content {
+  flex: 1;
+}
+
+.idiom-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+
+.idiom-pinyin {
+  font-size: 26rpx;
+  color: #ff6b6b;
+  margin-bottom: 15rpx;
+}
+
+.idiom-explanation {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 44rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.remove-btn {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: #999;
+}
