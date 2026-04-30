@@ -2,7 +2,7 @@ App({
   globalData: {
     userInfo: null,
     openid: null,
-    serverUrl: 'https://你的域名/api',
+    serverUrl: 'http://baiozhu.com/api',
     isDevMode: true,
     mockLevel: 1
   },
