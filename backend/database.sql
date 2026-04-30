@@ -25,8 +25,10 @@ CREATE TABLE `admins` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='管理员表';
 
 -- 插入默认管理员账号: admin / admin123
+-- 注意: 如果你已经导入了数据库，请运行以下命令重置密码:
+-- UPDATE admins SET password = '$2y$10$.vGA1O9wmRjrwAVXD98HNOwsOq9GjKx5JfG7q3QvH3eKv5mX7mQ2' WHERE username = 'admin';
 INSERT INTO `admins` (`username`, `password`, `nickname`, `role`) VALUES
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', '超级管理员', 2);
+('admin', '$2y$10$.vGA1O9wmRjrwAVXD98HNOwsOq9GjKx5JfG7q3QvH3eKv5mX7mQ2', '超级管理员', 2);
 
 -- 用户表
 DROP TABLE IF EXISTS `users`;

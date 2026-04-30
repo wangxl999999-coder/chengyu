@@ -5,9 +5,9 @@
 
 // 数据库配置
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'chengyu_game');
+define('DB_NAME', 'chengyu');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', '123123');
 define('DB_CHARSET', 'utf8mb4');
 
 // 微信小程序配置
